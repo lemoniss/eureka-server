@@ -1,0 +1,12 @@
+server:
+  port: 15000
+  hostname: localhost
+  protocal: http
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    eureka-server-port: 15000
+    serviceUrl:
+      defaultZone: ${server.protocal}://${server.hostname}:${eureka.client.eureka-server-port}/eureka/
